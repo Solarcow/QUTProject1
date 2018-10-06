@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
 
   has_many :memberships, dependent: :destroy
-  has_many :accounts through: :memberships
+  has_many :accounts, through: :memberships
 end
